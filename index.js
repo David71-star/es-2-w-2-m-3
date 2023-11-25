@@ -88,7 +88,8 @@ let contenitoreCardQuattro = document.querySelector(".carousel-inner");
 
 let cardSetUno = function () {
   for (let i = 0; i < firstCard.length; i++) {
-    contenitoreCard.innerHTML += `<div class=" col-6 col-md-4 col-lg-3">
+    if (i === 2) {
+      contenitoreCard.innerHTML += `<div class=" col-6 col-md-4 col-lg-3 d-none d-md-block">
         <div class="card rounded-top-5">
             <img src="${firstCard[i].immagine}" 
             class="card-img-top rounded-top-5 object-fit-cover" style="aspect-ratio: 1/1";">
@@ -97,12 +98,34 @@ let cardSetUno = function () {
             </div>
         </div>
     </div>`;
+    } else if (i === 3) {
+      contenitoreCard.innerHTML += `<div class=" col-6 col-md-4 col-lg-3 d-none d-lg-block">
+        <div class="card rounded-top-5">
+            <img src="${firstCard[i].immagine}" 
+            class="card-img-top rounded-top-5 object-fit-cover" style="aspect-ratio: 1/1";">
+            <div class="card-body p-0">
+            <h3 class="card-text p-2 rounded-bottom-2 text-nowrap fs-5">${firstCard[i].titolo}</h3>
+            </div>
+        </div>
+    </div>`;
+    } else {
+      contenitoreCard.innerHTML += `<div class=" col-6 col-md-4 col-lg-3">
+        <div class="card rounded-top-5">
+            <img src="${firstCard[i].immagine}" 
+            class="card-img-top rounded-top-5 object-fit-cover" style="aspect-ratio: 1/1";">
+            <div class="card-body p-0">
+            <h3 class="card-text p-2 rounded-bottom-2 text-nowrap fs-5">${firstCard[i].titolo}</h3>
+            </div>
+        </div>
+    </div>`;
+    }
   }
 };
 cardSetUno();
 let cardSetDue = function () {
   for (let i = 0; i < secondCard.length; i++) {
-    contenitoreCardDue.innerHTML += `<div class="col-6 col-md-4 col-lg-2 my-5">
+    if (i === 2) {
+      contenitoreCardDue.innerHTML += `<div class="col-6 col-md-4 col-lg-2 d-none d-md-block my-5">
           <div class="card rounded-top-5">
               <img src="${secondCard[i].immagine}" 
               class="card-img-top rounded-top-5 object-fit-cover" style="aspect-ratio: 1/1";">
@@ -111,6 +134,27 @@ let cardSetDue = function () {
               </div>
           </div>
       </div>`;
+    } else if (i === 3 || i === 4 || i === 5) {
+      contenitoreCardDue.innerHTML += `<div class="col-6 col-md-4 col-lg-2 d-none d-lg-block my-5">
+          <div class="card rounded-top-5">
+              <img src="${secondCard[i].immagine}" 
+              class="card-img-top rounded-top-5 object-fit-cover" style="aspect-ratio: 1/1";">
+              <div class="card-body p-0">
+              <h3 class="card-text p-2 rounded-bottom-2 text-nowrap fs-4">${secondCard[i].titolo}</h3>
+              </div>
+          </div>
+      </div>`;
+    } else {
+      contenitoreCardDue.innerHTML += `<div class="col-6 col-md-4 col-lg-2 my-5">
+          <div class="card rounded-top-5">
+              <img src="${secondCard[i].immagine}" 
+              class="card-img-top rounded-top-5 object-fit-cover" style="aspect-ratio: 1/1";">
+              <div class="card-body p-0">
+              <h3 class="card-text p-2 rounded-bottom-2 text-nowrap fs-4">${secondCard[i].titolo}</h3>
+              </div>
+          </div>
+      </div>`;
+    }
   }
 };
 cardSetDue();
