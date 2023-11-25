@@ -1,0 +1,68 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(255,255,255);
+    background: linear-gradient(30deg, rgba(255,255,255,1) 0%, rgba(37,20,45,1) 64%);;
+}
+.bg-danger{
+    background-color: #25142d!important;
+}
+nav{
+    box-shadow: 0px 4px 30px white;
+    border-bottom: white solid 1px;
+}
+.jumbtron h1{
+    text-shadow: 0px 0px 3px white;
+}
+.jumbtron{
+    border-bottom: white 3px solid;
+}
+#one img{
+    display: flex;
+    flex: 1 1 100px;
+}
+h2{
+    color: black;
+    text-shadow: 0px 4px 3px white;
+}
+#three h2{
+    text-align: center;
+    color: red;
+    font-size: 300%;
+}
+h3{
+    background-color: #cc2a41;
+    color: white;
+}
+.card{
+    box-shadow: 2px 2px 7px #cc2a41;
+}
+.card:hover{
+    scale: 103%;
+    box-shadow: 2px 2px 7px white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+#three a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-shadow: 0px 5px 7px #ffffff;
+}
+#three a:first-of-type, a span{
+    font-weight: bold;
+    font-size: xx-large;
+}
+button{
+    display: block;
+    border-radius: 25px;
+    border: none;
+    background-color: #25142d;
+    color: white;
+}
+button:hover{
+    box-shadow: white 0px 0px 2px ;
+    text-shadow: #cc2a41 0px 0px 2px;
+}
