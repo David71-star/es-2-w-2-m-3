@@ -89,7 +89,7 @@ let contenitoreCardQuattro = document.querySelector(".carousel-inner");
 let cardSetUno = function () {
   for (let i = 0; i < firstCard.length; i++) {
     if (i === 2) {
-      contenitoreCard.innerHTML += `<div class=" col-6 col-md-4 col-lg-3 d-none d-md-block">
+      contenitoreCard.innerHTML += `<div class="col-6 col-md-4 col-lg-3 d-none d-md-block">
         <div class="card rounded-top-5">
             <img src="${firstCard[i].immagine}" 
             class="card-img-top rounded-top-5 object-fit-cover" style="aspect-ratio: 1/1";">
@@ -134,7 +134,7 @@ let cardSetDue = function () {
               </div>
           </div>
       </div>`;
-    } else if (i === 3 || i === 4 || i === 5) {
+    } else if (i >= 3) {
       contenitoreCardDue.innerHTML += `<div class="col-6 col-md-4 col-lg-2 d-none d-lg-block my-5">
           <div class="card rounded-top-5">
               <img src="${secondCard[i].immagine}" 
